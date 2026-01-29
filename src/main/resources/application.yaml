@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: dhanush-chat-bot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: asdf
+    password: asdf
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      model: gemma3:4b
+      chat:
+        options:
+          temperature: 0.7
+          model: gemma3:4b
+      embedding:
+        options:
+          model: mxbai-embed-large
+    model:
+      embedding: ollama
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1024
+        max-document-batch-size: 10
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
