@@ -1,11 +1,11 @@
 spring:
   application:
     name: dhanush-chat-bot
-  datasource:
-    url: jdbc:postgresql://localhost:5432/mydatabase
-    username: asdf
-    password: asdf
-    driver-class-name: org.postgresql.Driver
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres1
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update

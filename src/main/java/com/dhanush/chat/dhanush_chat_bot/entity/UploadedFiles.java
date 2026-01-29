@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "uploaded_files")
+@Table(name = "uploaded_rag_files")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,9 +19,8 @@ import java.time.LocalDate;
 public class UploadedFiles {
 
     @Id
-    private String id;
-    private String fileName;
     private String docId;
+    private String fileName;
     private String userId;
     private LocalDate updatedAt;
 }
